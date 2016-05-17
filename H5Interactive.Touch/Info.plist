@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>H5Interactive.Touch</string>
+	<string>H5交互测试</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.companyname.H5Interactive.Touch</string>
+	<string>net.hubs1.H5Interactivee</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -35,5 +35,7 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSMainNibFile</key>
+	<string>LaunchScreen</string>
 </dict>
 </plist>
