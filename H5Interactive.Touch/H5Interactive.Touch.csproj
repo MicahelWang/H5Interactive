@@ -23,7 +23,7 @@
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>iPhone Developer: fangtao chen (P4L872579R)</CodesignKey>
-    <CodesignProvision>beeb7a48-ec6a-4923-9a4e-7be74d199b7b</CodesignProvision>
+    <CodesignProvision>a13ab2c1-5d2f-4977-8b1d-ce47bde5c734</CodesignProvision>
     <CodesignEntitlements />
     <CodesignResourceRules />
     <CodesignExtraArgs />
@@ -51,7 +51,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CodesignKey>iPhone Developer: fangtao chen (P4L872579R)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignProvision>beeb7a48-ec6a-4923-9a4e-7be74d199b7b</CodesignProvision>
+    <CodesignProvision>a13ab2c1-5d2f-4977-8b1d-ce47bde5c734</CodesignProvision>
     <CodesignResourceRules />
     <CodesignExtraArgs />
   </PropertyGroup>

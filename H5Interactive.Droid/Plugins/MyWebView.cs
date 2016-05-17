@@ -12,11 +12,13 @@ namespace H5Interactive.Droid.Plugins
         public MyWebView(Context context) : base(context)
         {
             Settings.JavaScriptEnabled = true;
+            this.SetWebViewClient(new MyWebViewClient());
         }
 
         public MyWebView(Context context, IAttributeSet attrs) : base(context, attrs)
         {
             Settings.JavaScriptEnabled = true;
+            this.SetWebViewClient(new MyWebViewClient());
         }
 
         public void ExcuteJs(string fnName, string options)
@@ -37,9 +39,19 @@ namespace H5Interactive.Droid.Plugins
             set
             {
                 _calls = value;
-                JavaScriptEntity javaScript = new JavaScriptEntity(this,_calls);
+                JavaScriptEntity javaScript = new JavaScriptEntity(_calls);
                 this.AddJavascriptInterface(javaScript, "contact");
             }
+        }
+    }
+
+    public class MyWebViewClient: WebViewClient
+    {
+
+        public override bool ShouldOverrideUrlLoading(WebView view, string url)
+        {
+            view.LoadUrl(url);
+            return true;
         }
     }
 }
