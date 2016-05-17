@@ -84,10 +84,13 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Bootstrap\PhoneCallPluginBootstrap.cs" />
     <Compile Include="DebugTrace.cs" />
+    <Compile Include="Delegates\MyWebViewDelegate.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Plugins\MyWebView.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Views\FirstView.cs" />
     <Compile Include="Views\FirstView.designer.cs" />
@@ -127,6 +130,14 @@
       <HintPath>..\packages\MvvmCross.Platform.4.1.4\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="MvvmCross.Plugins.PhoneCall, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.PhoneCall.4.1.4\lib\Xamarin.iOS10\MvvmCross.Plugins.PhoneCall.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.PhoneCall.iOS, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.PhoneCall.4.1.4\lib\Xamarin.iOS10\MvvmCross.Plugins.PhoneCall.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -142,6 +153,9 @@
       <Project>{03a58860-a8c0-423c-9a26-dc877c1dfbdd}</Project>
       <Name>H5Interactive.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utils\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
