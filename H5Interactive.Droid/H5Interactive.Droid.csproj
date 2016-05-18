@@ -98,6 +98,7 @@
     <Compile Include="DebugTrace.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Plugins\MyWebView.cs" />
+    <Compile Include="Plugins\MyWebViewClient.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />

@@ -32,6 +32,7 @@ namespace H5Interactive.Droid.Plugins
             this.LoadUrl(javascriptCommand);
         }
 
+        public string ScopeName { get; set; } = "AppJs";
         private IDictionary<string, IJavascriptCall> _calls;
         public IDictionary<string, IJavascriptCall> Calls
         {
@@ -40,18 +41,19 @@ namespace H5Interactive.Droid.Plugins
             {
                 _calls = value;
                 JavaScriptEntity javaScript = new JavaScriptEntity(_calls);
-                this.AddJavascriptInterface(javaScript, "contact");
+
+                this.AddJavascriptInterface(javaScript, ScopeName);
             }
         }
-    }
 
-    public class MyWebViewClient: WebViewClient
-    {
-
-        public override bool ShouldOverrideUrlLoading(WebView view, string url)
+        private void InitJavascriptInterface()
         {
-            view.LoadUrl(url);
-            return true;
+            if (ScopeName != "AppJs")
+            {
+                this.RemoveJavascriptInterface("AppJs");
+            }
+            JavaScriptEntity javaScript = new JavaScriptEntity(_calls);
+            this.AddJavascriptInterface(javaScript, ScopeName);
         }
     }
 }

@@ -33,7 +33,7 @@ namespace H5Interactive.Touch.Plugins
             {
                 json = options;
             }
-            var script = String.Format(@"{0}({1})", fnName, json);
+            var script = $@"{fnName}({json})";
             this.EvaluateJavascript(script);
         }
         private IDictionary<string, IJavascriptCall> _calls;
