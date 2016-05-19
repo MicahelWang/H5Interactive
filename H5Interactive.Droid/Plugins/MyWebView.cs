@@ -40,9 +40,7 @@ namespace H5Interactive.Droid.Plugins
             set
             {
                 _calls = value;
-                JavaScriptEntity javaScript = new JavaScriptEntity(_calls);
-
-                this.AddJavascriptInterface(javaScript, ScopeName);
+                InitJavascriptInterface();
             }
         }
 
