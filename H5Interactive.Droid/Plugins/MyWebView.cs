@@ -21,6 +21,10 @@ namespace H5Interactive.Droid.Plugins
             this.SetWebViewClient(new MyWebViewClient());
         }
 
+        public new void Reload()
+        {
+            base.Reload();
+        }
         public void ExcuteJs(string fnName, string options)
         {
             var json = string.Empty;

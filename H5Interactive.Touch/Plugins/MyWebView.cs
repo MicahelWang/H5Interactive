@@ -26,6 +26,11 @@ namespace H5Interactive.Touch.Plugins
             ScalesPageToFit = true;
         }
 
+        public new void Reload()
+        {
+            base.Reload();
+        }
+
         public void ExcuteJs(string fnName,string options)
         {
             var json = string.Empty;

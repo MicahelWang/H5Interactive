@@ -10,6 +10,8 @@ namespace H5Interactive.Core.Utils
         /// <param name="fnName">方法名</param>
         /// <param name="options">参数</param>
         void ExcuteJs(string fnName,string options);
-        IDictionary<string,IJavascriptCall> Calls { get; set; } 
+        IDictionary<string,IJavascriptCall> Calls { get; set; }
+
+        void Reload();
     }
 }

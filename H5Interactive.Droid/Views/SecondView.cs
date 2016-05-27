@@ -6,7 +6,7 @@ using MvvmCross.Droid.Views;
 namespace H5Interactive.Droid.Views
 {
     [Activity(Label = "View for FirstViewModel")]
-    public class SecondView : MvxActivity<SecondViewModel>
+    public class SecondView : BaseView<SecondViewModel>
     {
         protected override void OnViewModelSet()
         {
@@ -16,6 +16,7 @@ namespace H5Interactive.Droid.Views
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+            SetContentView(Resource.Layout.SecondView);
         }
     }
 }

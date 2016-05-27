@@ -16,7 +16,7 @@ using MvvmCross.Droid.Views;
 namespace H5Interactive.Droid.Views
 {
     [Activity(Label = "View for FirstViewModel")]
-    public class FirstView : MvxActivity<FirstViewModel>
+    public class FirstView : BaseView<FirstViewModel>
     {
         protected override void OnCreate(Bundle bundle)
         {
@@ -24,17 +24,9 @@ namespace H5Interactive.Droid.Views
             SetContentView(Resource.Layout.FirstView);
             var webView = FindViewById<MyWebView>(Resource.Id.webView1);
             this.ViewModel.WebView = webView;
-            var btnReload = FindViewById<Button>(Resource.Id.btnReload);
-            btnReload.Click += delegate
-            {
-                webView.Reload();
-            };
-            //webView.Settings.JavaScriptEnabled = true;
             var url = "http://192.168.1.87/main.html";
             webView.Calls = ViewModel.JavascriptCalls;
             webView.LoadUrl(url);
-            //var jsEnttiy = new JavaScriptEntity(webView, ViewModel.JavaScripts);
-            //webView.AddJavascriptInterface(jsEnttiy, "contact");
 
         }
 

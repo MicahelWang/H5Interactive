@@ -5,7 +5,7 @@ namespace H5Interactive.Core.ViewModels
     public class SecondViewModel
         : MvxViewModel
     {
-        private string _hello = "Hello MvvmCross";
+        private string _hello = "Hello SecondView";
         public string Hello
         {
             get { return _hello; }

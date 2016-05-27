@@ -42,6 +42,28 @@ namespace H5Interactive.Core.ViewModels
             get { return _javascriptCalls; }
             set { SetProperty(ref _javascriptCalls, value); }
         }
+        public IMvxCommand ShowSecondCommand
+        {
+            get
+            {
+                return new MvxCommand(() =>
+                {
+                    ShowViewModel<SecondViewModel>();
+                });
+            }
+        }
+
+        public IMvxCommand ReloadCommand
+        {
+            get
+            {
+                return new MvxCommand(() =>
+                {
+                    WebView.Reload();
+                });
+            }
+        }
+
 
 
     }

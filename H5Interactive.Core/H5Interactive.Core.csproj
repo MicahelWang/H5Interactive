@@ -41,6 +41,7 @@
     <Compile Include="Utils\Helpers.cs" />
     <Compile Include="Utils\IJavascriptCall.cs" />
     <Compile Include="Utils\IMvxWebView.cs" />
+    <Compile Include="Utils\IStatisticsService.cs" />
     <Compile Include="ViewModels\SecondViewModel.cs" />
     <Compile Include="ViewModels\FirstViewModel.cs" />
   </ItemGroup>

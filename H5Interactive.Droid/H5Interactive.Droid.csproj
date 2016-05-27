@@ -104,6 +104,8 @@
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
     <Compile Include="Utils\JavaScriptEntity.cs" />
+    <Compile Include="Utils\StatisticsService.cs" />
+    <Compile Include="Views\BaseView.cs" />
     <Compile Include="Views\SecondView.cs" />
     <Compile Include="Views\FirstView.cs" />
   </ItemGroup>
@@ -123,7 +125,9 @@
     <AndroidResource Include="Resources\drawable\Icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\SplashStyle.xml" />
@@ -134,6 +138,10 @@
     <ProjectReference Include="..\H5Interactive.Core\H5Interactive.Core.csproj">
       <Project>{03a58860-a8c0-423c-9a26-dc877c1dfbdd}</Project>
       <Name>H5Interactive.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\H5Interactive.Droid.Bindings.Umeng\H5Interactive.Droid.Bindings.Umeng.csproj">
+      <Project>{ffe92229-7346-4984-a906-93e4e3ca3641}</Project>
+      <Name>H5Interactive.Droid.Bindings.Umeng</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
