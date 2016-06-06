@@ -49,9 +49,10 @@
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <CodesignKey>iPhone Developer: fangtao chen (P4L872579R)</CodesignKey>
+    <CodesignKey>iPhone Developer: Ruiliang Zhang (JH3357WT37)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignProvision>a13ab2c1-5d2f-4977-8b1d-ce47bde5c734</CodesignProvision>
+    <CodesignProvision>
+    </CodesignProvision>
     <CodesignResourceRules />
     <CodesignExtraArgs />
   </PropertyGroup>

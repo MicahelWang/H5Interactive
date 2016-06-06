@@ -12,13 +12,13 @@ namespace H5Interactive.Touch.Views
     {
         public FirstView() : base("FirstView", null)
         {
-            this.NavigationController.NavigationBar.Hidden = true;
+            
         }
         int _heigt = 0;
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-
+            this.NavigationController.NavigationBar.Hidden = true;
             var set = this.CreateBindingSet<FirstView, Core.ViewModels.FirstViewModel>();
             //var button = AddButton("Reload");
             var urlAddress = ViewModel.Url;

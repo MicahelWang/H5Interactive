@@ -5,7 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>H5交互测试</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.hubs1.H5Interactivee</string>
+	<string>com.ddjiudian.H5Interactive</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
