@@ -10,7 +10,7 @@ using MvvmCross.Platform;
 namespace H5Interactive.Droid
 {
     [Activity(
-        Label = "H5Interactive.Droid"
+        Label = "@string/ApplicationName"
         , MainLauncher = true
         , Icon = "@drawable/icon"
         , Theme = "@style/Theme.Splash"

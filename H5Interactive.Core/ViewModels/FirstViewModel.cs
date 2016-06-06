@@ -28,7 +28,7 @@ namespace H5Interactive.Core.ViewModels
                     "Show", new JavaScriptCall(o =>{WebView?.ExcuteJs("show", users.ToJson());})
                 }
             };
-            Url = "http://mtest.ddjiudian.com/voucher?token=f669a2a427b1423ea76ea26b19e55ab1";
+            Url = "http://mtest.ddjiudian.com/";
         }
         private string _hello = "Hello MvvmCross";
         public string Hello
