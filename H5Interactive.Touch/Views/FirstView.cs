@@ -12,6 +12,7 @@ namespace H5Interactive.Touch.Views
     {
         public FirstView() : base("FirstView", null)
         {
+            this.NavigationController.NavigationBar.Hidden = true;
         }
         int _heigt = 0;
         public override void ViewDidLoad()
@@ -19,21 +20,15 @@ namespace H5Interactive.Touch.Views
             base.ViewDidLoad();
 
             var set = this.CreateBindingSet<FirstView, Core.ViewModels.FirstViewModel>();
-            set.Bind(Label).To(vm => vm.Hello);
-            set.Bind(TextField).To(vm => vm.Hello);
-
-
-            _heigt = 140;
-            var button = AddButton("Reload");
-
-            var urlAddress = "http://192.168.1.87/main.html";
+            //var button = AddButton("Reload");
+            var urlAddress = ViewModel.Url;
             var webView = AddWebView(urlAddress);
             this.ViewModel.WebView = webView;
 
-            button.TouchUpInside += delegate
-            {
-                webView.Reload();
-            };
+            //button.TouchUpInside += delegate
+            //{
+            //    webView.Reload();
+            //};
             set.Apply();
         }
 
@@ -47,16 +42,16 @@ namespace H5Interactive.Touch.Views
         }
         private MyWebView AddWebView(string urlAddress)
         {
-            var currentHeight = 10 + _heigt;
+            var currentHeight = _heigt;
             var screenWidth = (int)UIScreen.MainScreen.Bounds.Width;
             var screenHeight = (int)UIScreen.MainScreen.Bounds.Height;
             MyWebView webView = new MyWebView(urlAddress,ViewModel.JavascriptCalls)
             {
-                Frame = new RectangleF(10, currentHeight, screenWidth - 20, screenHeight - currentHeight),
+                Frame = new RectangleF(0, currentHeight, screenWidth, screenHeight - currentHeight),
                 ScalesPageToFit = true
             };
             Add(webView);
-            _heigt = screenHeight;
+            _heigt = currentHeight+10;
             return webView;
         }
     }

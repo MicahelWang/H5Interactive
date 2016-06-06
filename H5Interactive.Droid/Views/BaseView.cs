@@ -13,13 +13,13 @@ namespace H5Interactive.Droid.Views
         protected string PageName;
         public BaseView()
         {
-            Statistics=Mvx.Resolve<IStatisticsService>();
+            //Statistics=Mvx.Resolve<IStatisticsService>();
             PageName = this.Title;
         }
         protected override void OnResume()
         {
-            Statistics.OnResume();
-            Statistics.OnPageStart(PageName);
+            //Statistics.OnResume();
+            //Statistics.OnPageStart(PageName);
             base.OnResume();
         }
 
@@ -30,7 +30,7 @@ namespace H5Interactive.Droid.Views
 
         protected override void OnPause()
         {
-            Statistics.OnPageEnd(PageName);
+            //Statistics.OnPageEnd(PageName);
             base.OnPause();
         }
 

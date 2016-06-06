@@ -168,6 +168,9 @@ namespace H5Interactive.Droid
 		public partial class Style
 		{
 			
+			// aapt resource value: 0x7f050001
+			public const int Theme_DefaultStyle = 2131034113;
+			
 			// aapt resource value: 0x7f050000
 			public const int Theme_Splash = 2131034112;
 			

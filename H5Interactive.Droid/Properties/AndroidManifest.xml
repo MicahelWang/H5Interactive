@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="H5Interactive.Droid.H5Interactive.Droid" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.ddjiudian.H5Interactive" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="16" />
 	<uses-permission android:name="android.permission.CALL_PHONE" />
-	<application android:label="H5Interactive.Droid"></application>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<application android:label="H5交互测试"></application>
 </manifest>

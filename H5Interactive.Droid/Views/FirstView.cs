@@ -15,21 +15,23 @@ using MvvmCross.Droid.Views;
 
 namespace H5Interactive.Droid.Views
 {
-    [Activity(Label = "View for FirstViewModel")]
+    [Activity(Label = "View for FirstViewModel",Theme = "@style/Theme.DefaultStyle")]
     public class FirstView : BaseView<FirstViewModel>
     {
+        private MyWebView _webView;
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.FirstView);
-            var webView = FindViewById<MyWebView>(Resource.Id.webView1);
-            this.ViewModel.WebView = webView;
-            var url = "http://192.168.1.87/main.html";
-            webView.Calls = ViewModel.JavascriptCalls;
-            webView.LoadUrl(url);
+            _webView = FindViewById<MyWebView>(Resource.Id.webView1);
+            this.ViewModel.WebView = _webView;
+            var url = ViewModel.Url;
+            _webView.Calls = ViewModel.JavascriptCalls;
+            _webView.LoadUrl(url);
 
         }
 
+       
     }
 
 

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq.Expressions;
 using Android.Content;
 using Android.Util;
 using Android.Webkit;
@@ -18,6 +19,13 @@ namespace H5Interactive.Droid.Plugins
         public MyWebView(Context context, IAttributeSet attrs) : base(context, attrs)
         {
             Settings.JavaScriptEnabled = true;
+            Settings.DomStorageEnabled = true;
+            Settings.SetAppCacheMaxSize(1024 * 1024 * 8);
+            string appCachePath = context.ApplicationContext.CacheDir.AbsolutePath;
+            Settings.SetAppCachePath(appCachePath);
+            Settings.AllowFileAccess = (true);
+            Settings.SetAppCacheEnabled(true);
+
             this.SetWebViewClient(new MyWebViewClient());
         }
 

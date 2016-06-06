@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <Button
+<!--<Button
         android:text="Reload"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,7 +13,7 @@
         android:text="Show SecondView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        local:MvxBind="Click ShowSecondCommand" />
+        local:MvxBind="Click ShowSecondCommand" />-->
     <MyWebView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
